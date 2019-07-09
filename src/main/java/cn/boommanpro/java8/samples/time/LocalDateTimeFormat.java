@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @author <a href="mailto:wangqimeng@mininglamp.com">wangqiemng</a>
+ * @author <a href="mailto:boommanpro@gmail.com">BoomManPro</a>
  * @date 2019/7/9 16:20
- * @created by wangqimeng
+ * @created by BoomManPro
  */
 public class LocalDateTimeFormat {
     private static final DateTimeFormatter DEFAULT_DATE_TIME_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
