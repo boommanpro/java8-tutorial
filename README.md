@@ -815,3 +815,71 @@ I've also published a bunch of follow-up articles on my [blog](http://winterbe.c
 - [Using Backbone.js with Java 8 Nashorn](http://winterbe.com/posts/2014/04/07/using-backbonejs-with-nashorn/)
 
 You should [follow me on Twitter](https://twitter.com/winterbe_). Thanks for reading!
+
+
+## 一课掌握Lambda表达式语法及应用
+
+一课掌握Lambda表达式语法及应用 [Link](https://www.imooc.com/learn/1196)
+
+![lambda](https://raw.githubusercontent.com/BoomManPro/java8-tutorial/master/res/lambda.png)
+
+### 什么是Lambda
+
+- Lambda表达式也被称为箭头函数、匿名函数、闭包
+
+- Lambda表达式体现的是轻量级函数式编程思想
+
+- `->`符号式Lambda表达式核心操作符号,符号左侧是操作参数,符号右侧是操作表达式
+
+- JDK8新特性
+
+- 不关心调用了什么函数,关心不断的产生了什么数据
+
+### Model Code as Data
+
+编码及数据,尽可能轻量级的将代码封装为数据
+
+### 为什么要用Lambda表达式
+
+它不是解决为止问题的新技术
+
+对现有解决方案的语义优化
+
+需要根据实际需求考虑性能问题
+
+
+### Java类型系统内建函数式接口
+
+
+java.util.function 提供了大量的函数式接口
+Predicate 接收参数T对象m返回一个boolean类型结果
+Consumer 接受参数T对象,没有返回值
+Function 接收参数T对象 返回R对象
+Supplier 不接受任何参数,直接通过get()获取指定类型的对象
+UnaryOperator 接口参数T对象,执行业务处理后,返回更新后的T对象
+BinaryOperator 接口接受两个T对象,执行业务处理,返回一个T对象
+
+### Lambda表达式的基本语法
+
+`[接口声明] =(参数) ->{执行代码块};`
+
+### Lambda 底层实现
+
+1.生成一个Lambda私有静态方法
+
+2.生一个实现Lambda接口的final类
+
+3.final类中的接口方法调用静态类的静态方法
+
+
+涉及到的Java编译命令
+
+1. javac App.java
+
+2. javap -p App.class
+
+3. java -Djdk.internal.lambda.dumpProxyClasses App
+
+4. javap -p App$$Lambda$.class
+
+
